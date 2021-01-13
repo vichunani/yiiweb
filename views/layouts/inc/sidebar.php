@@ -1,4 +1,8 @@
+<?php 
 
+use app\components\MenuWidget;
+
+?>
 		<div class="w3l_banner_nav_left">
 			<nav class="navbar nav_bottom">
 			 <!-- Brand and toggle get grouped for better mobile display -->
@@ -12,7 +16,13 @@
 			   </div> 
 			   <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav nav_1">
+
+					<?= MenuWidget::widget(
+						['tpl' => 'menu',
+							'ul_class' => 'nav navbar-nav nav_1',
+						]) 
+					?>
+					<!-- <ul class="nav navbar-nav nav_1">
 						<li><a href="products.html">Branded Foods</a></li>
 						<li><a href="household.html">Households</a></li>
 						<li class="dropdown mega-dropdown active">
@@ -52,7 +62,7 @@
 							</div>	
 						</li>
 						<li><a href="bread.html">Bread & Bakery</a></li>
-					</ul>
+					</ul> -->
 				 </div><!-- /.navbar-collapse -->
 			</nav>
 		</div>
