@@ -3,7 +3,7 @@
     <div class="container">
         <ul>
             <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a><span>|</span></li>
-            <li>Branded Foods</li>
+            <li><?=$category->title ?></li>
         </ul>
     </div>
 </div>
@@ -82,7 +82,7 @@
                                     <div class="snipcart-item block">
                                         <div class="snipcart-thumb">
                                             <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>">
-                                                <?= \yii\helpers\Html::img("@web/products/{$product->img}", ['alt' => $product->title]) ?>
+                                                <?= \yii\helpers\Html::img("@web/images/{$product->img}", ['alt' => $product->title]) ?>
                                             </a>
                                             <p><?= $product->title ?></p>
                                             <h4>
